@@ -1,10 +1,12 @@
-"use client"
+"use client";
 import { Tooltip } from "react-tooltip";
 import { generator } from "./utils/generator";
+import { calculatePercentage } from "./utils/percentage";
 import Day from "./components/Day";
 
 function App() {
   const days = generator();
+  const percentage = calculatePercentage();
   return (
     <main className="p-16 sm:p-24">
       <section className="pb-12 md:text-xl grid justify-center text-center">
@@ -14,13 +16,16 @@ function App() {
           <p className="italic font-light pl-16">
             an object kept as a reminder of the inevitability of death
           </p>
+          <p className="my-4 slashed-zero oldstyle-nums text-2xl text-bold text-center">
+            Life {percentage}% complete.
+          </p>
         </div>
       </section>
       <section id="container">
-        {days.map((day, i) => {
+        {days.map((day, idx) => {
           return (
             <Day
-              key={i}
+              key={idx}
               date={day.date}
               past={day.past}
               url={day.url}
