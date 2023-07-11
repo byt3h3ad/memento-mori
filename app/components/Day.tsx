@@ -3,23 +3,33 @@ interface dayData {
   today: boolean;
   past: boolean;
   birthday: boolean;
+  family?: boolean;
   summary?: string;
   url?: string;
 }
 
-const Day = ({ date, today, past, birthday, url, summary }: dayData) => {
+const Day = ({
+  date,
+  today,
+  past,
+  birthday,
+  family,
+  url,
+  summary,
+}: dayData) => {
   const divStyle = {
     background:
       birthday && past
         ? "#0969DA"
+        : family && past
+        ? "#FA4549"
         : (url || summary) && past
         ? "#40C643"
         : today
-        ? "#FB923C"
+        ? "#512A97"
         : past
         ? "#bfbfbf"
         : "#EBEDF0",
-
     outline: "1 px solid rgba(27, 31, 35, 0.06)",
   };
   if (url) {

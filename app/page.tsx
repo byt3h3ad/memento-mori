@@ -2,7 +2,6 @@
 import { Tooltip } from "react-tooltip";
 import { generator } from "./utils/generator";
 import Day from "./components/Day";
-import "./globals.css";
 
 function App() {
   const days = generator();
@@ -26,6 +25,7 @@ function App() {
               past={day.past}
               url={day.url}
               today={day.today}
+              family={day.family}
               summary={day.summary}
               birthday={day.birthday}
             />
