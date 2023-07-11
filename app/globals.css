@@ -6,14 +6,9 @@
   --foreground-rgb: 0, 0, 0;
   --background-start-rgb: 214, 219, 220;
   --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
+  font-family: ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  line-height: 1.5;
+  font-weight: 400;
 }
 
 body {
@@ -24,4 +19,25 @@ body {
       rgb(var(--background-end-rgb))
     )
     rgb(var(--background-start-rgb));
+}
+
+#container {
+  @apply grid;
+  @apply gap-2;
+  grid-template-columns: repeat(auto-fill, minmax(10px, 1fr));
+  @apply pb-24;
+}
+
+:root {
+  --color1: #262626;
+  --color2: #FB923C;
+  --color3: #bfbfbf;
+  --color4: #F4F4F5;
+  
+  --color5: #EBEDF0;
+  --color6: #9BE9A8;
+  --color7: #40C643;
+  --color8: #30A14E;
+  --color9: #216E39;
+  --border: rgba(27, 31, 35, 0.06)
 }
