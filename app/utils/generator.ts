@@ -6,6 +6,7 @@ interface DayObject {
   today: boolean;
   past: boolean;
   birthday: boolean;
+  family?: boolean;
   summary?: string;
   url?: string;
 }
@@ -23,6 +24,8 @@ const generator = (): DayObject[] => {
     const day = current.getDate();
     const month = current.getMonth() + 1;
     const birthday = day === 21 && month === 8;
+    const family: boolean | undefined =
+      dateString in days ? days[dateString].family : undefined;
     const url: string | undefined =
       dateString in days ? days[dateString].url : undefined;
     const summary: string | undefined =
@@ -34,6 +37,7 @@ const generator = (): DayObject[] => {
       today,
       summary,
       birthday,
+      family,
     });
     current = addDays(current, 1);
   }

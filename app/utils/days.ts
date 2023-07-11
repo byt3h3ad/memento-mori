@@ -1,4 +1,6 @@
-const days: { [key: string]: { url?: string; summary?: string } } = {
+const days: {
+  [key: string]: { family?: boolean; url?: string; summary?: string };
+} = {
   "2002-08-21": { summary: "Born in Jorhat, Assam" },
   "2003-08-21": { summary: "1st Birthday 🎉" },
   "2004-08-21": { summary: "2nd Birthday 🎉" },
@@ -20,7 +22,8 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
   "2020-08-21": { summary: "18th Birthday 🎉" },
   "2021-08-21": { summary: "19th Birthday 🎉" },
   "2022-08-21": { summary: "20th Birthday 🎉" },
-  "2021-12-25": { 
+  "2021-12-25": {
+    family: true,
     summary: "Started dating Aditi!",
     url: "https://twitter.com/byt3h3ad/status/1678407175444602883",
   },
@@ -38,6 +41,7 @@ const days: { [key: string]: { url?: string; summary?: string } } = {
     summary: "Changed department to Electronics and Communication Engineering",
   },
   "2022-11-06": {
+    family: true,
     summary: "Grandfather passed away",
   },
 };
