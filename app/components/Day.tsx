@@ -30,7 +30,7 @@ const Day = ({
         : past
         ? "#bfbfbf"
         : "#EBEDF0",
-    outline: "1 px solid rgba(27, 31, 35, 0.06)",
+    outline: "1px solid rgba(27, 31, 35, 0.06)",
   };
   if (url) {
     return (

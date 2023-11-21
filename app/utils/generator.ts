@@ -12,7 +12,7 @@ interface DayObject {
 }
 
 const generator = (): DayObject[] => {
-  const start = new Date("2002-08-21");
+  const start = new Date("2003-05-01");
   const end = addDays(start, 75 * 365);
   const dateArray: DayObject[] = [];
   let current = start;
@@ -23,7 +23,7 @@ const generator = (): DayObject[] => {
     const today = isToday(current);
     const day = current.getDate();
     const month = current.getMonth() + 1;
-    const birthday = day === 21 && month === 8;
+    const birthday = day === 1 && month === 5;
     const family: boolean | undefined =
       dateString in days ? days[dateString].family : undefined;
     const url: string | undefined =
